@@ -1,0 +1,23 @@
+package Beginner;
+
+import java.util.Scanner;
+
+public class DecrementORIncrement
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        int number = -1;
+
+        if(sc.hasNextInt())
+            number = sc.nextInt();
+
+        if(number >= 0 && number <= 1000)
+        {
+            if(number%4 == 0)
+                System.out.println(++number);
+            else
+                System.out.println(--number);
+        }
+    }
+}
