@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class NumberMirror
+{
+    public static void main(String[] args)
+    {
+        Scanner sc  = new Scanner(System.in);
+        int number = -1;
+        if(sc.hasNextInt())
+        {
+            number = sc.nextInt();
+        }
+
+        if(number >= 0 && number <= 100000)
+        {
+            System.out.println(number);
+        }
+    }
+}
