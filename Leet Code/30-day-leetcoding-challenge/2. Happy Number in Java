@@ -1,0 +1,31 @@
+class Solution 
+{
+    public boolean isHappy(int n) 
+    {  
+        HashSet<Integer> set = new HashSet<Integer>();
+        while(!set.contains(n))
+        {
+            set.add(n);
+            
+            n = squareAddition(n);
+            if(n == 1)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+    
+    public int squareAddition(int n)
+    {
+        int squareValue = 0, sum = 0, temp = 0;
+        while(n > 0)
+        {
+            temp = n % 10;
+            squareValue = temp * temp;
+            sum += squareValue;
+            n/=10;
+        }
+        return sum;
+    }
+}
